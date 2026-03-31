@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sri Tulasi Caterers | Authentic Telugu Catering in Hyderabad</title>
+  <meta name="description" content="Sri Tulasi Caterers brings authentic Telugu and Hyderabadi catering for weddings, parties, and family functions in Hayathnagar, Hyderabad. Call 9392923516." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&amp;family=Tiro+Telugu:ital,wght@0,400;0,700;1,400&amp;family=Nunito:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            saffron:  '#E8620A',
+            gold:     '#C8970A',
+            goldlt:   '#F5D060',
+            crimson:  '#8B1A1A',
+            forest:   '#1A4A2E',
+            forestlt: '#2D7A4F',
+            cream:    '#FDF6E3',
+            spice:    '#5C1A0A',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body:    ['Nunito', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-body bg-cream text-spice overflow-x-hidden">
+  <div class="site-video-shell" aria-hidden="true">
+    <div class="site-photo-bg"></div>
+    <div class="site-video-overlay"></div>
+    <div class="site-video-grain"></div>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <div class="logo-emblem w-10 h-10 lg:w-12 lg:h-12 flex-shrink-0">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="logoBg" x1="6" y1="6" x2="42" y2="42" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#163D29"/>
+                  <stop offset="1" stop-color="#0D2418"/>
+                </linearGradient>
+                <linearGradient id="logoGold" x1="14" y1="10" x2="34" y2="34" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#F5D060"/>
+                  <stop offset="1" stop-color="#C8970A"/>
+                </linearGradient>
+              </defs>
+              <circle cx="24" cy="24" r="22" fill="url(#logoBg)" stroke="url(#logoGold)" stroke-width="2"/>
+              <circle cx="24" cy="24" r="16" stroke="#C8970A" stroke-opacity="0.25" stroke-width="1"/>
+              <path d="M14 26C14 20.477 18.477 16 24 16C29.523 16 34 20.477 34 26V27.5C34 32.194 30.194 36 25.5 36H22.5C17.806 36 14 32.194 14 27.5V26Z" fill="#5C2A10"/>
+              <path d="M14 25C14 19.477 18.477 15 24 15C29.523 15 34 19.477 34 25V26.5C34 31.194 30.194 35 25.5 35H22.5C17.806 35 14 31.194 14 26.5V25Z" fill="#6E3414"/>
+              <ellipse cx="24" cy="23.5" rx="10.5" ry="3.7" fill="#E5A33A"/>
+              <ellipse cx="24" cy="22.8" rx="10.5" ry="3.4" fill="#F0BB53"/>
+              <ellipse cx="20.5" cy="22.5" rx="1.5" ry="0.55" fill="#FFF1BE" transform="rotate(-18 20.5 22.5)"/>
+              <ellipse cx="24" cy="21.9" rx="1.5" ry="0.55" fill="#FFF1BE" transform="rotate(11 24 21.9)"/>
+              <ellipse cx="27.6" cy="22.6" rx="1.5" ry="0.55" fill="#FFF1BE" transform="rotate(-14 27.6 22.6)"/>
+              <circle cx="22.3" cy="22.7" r="0.7" fill="#8B1A1A"/>
+              <circle cx="27.5" cy="22.3" r="0.7" fill="#8B1A1A"/>
+              <circle cx="24.9" cy="21.8" r="0.55" fill="#2D7A4F"/>
+              <path d="M18 12.5C19.9 9.8 22.7 8.5 24.2 8.4C25.6 8.3 27.4 9.2 28.7 10.8C29.8 12.2 30.3 13.9 30.4 15.2C28.7 14.6 26.8 14.3 24.8 14.3C22.2 14.3 19.8 14.8 17.9 15.7C17.7 14.5 17.8 13.5 18 12.5Z" fill="url(#logoGold)"/>
+              <path d="M23.8 11.2C23.6 9.8 23.9 8.6 24.8 7.3" stroke="#FDF6E3" stroke-width="0.8" stroke-linecap="round"/>
+              <path d="M28.7 12.3C30.2 11 31.1 9.8 31.4 8.3" stroke="#FDF6E3" stroke-width="0.8" stroke-linecap="round"/>
+              <path d="M17.7 27.4C20.6 28.4 23 28.8 24.9 28.8C27.3 28.8 29.8 28.2 32.2 27.4" stroke="#C8970A" stroke-width="1.1" stroke-dasharray="2.2 1.8"/>
+            </svg>
+          </div>
+          <div class="leading-tight">
+            <div class="text-gold font-display font-bold text-lg lg:text-xl tracking-wide group-hover:text-goldlt transition-colors">Sri Tulasi</div>
+            <div class="text-cream text-xs tracking-widest uppercase opacity-80">Caterers</div>
+          </div>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <ul class="hidden lg:flex items-center gap-8">
+          <li><a href="#home"     class="nav-link">Home</a></li>
+          <li><a href="#about"    class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#menu"     class="nav-link">Menu</a></li>
+          <li><a href="#gallery"  class="nav-link">Gallery</a></li>
+          <li><a href="#reviews"  class="nav-link">Reviews</a></li>
+          <li><a href="#contact"  class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- CTA + Hamburger -->
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex lang-pill" aria-label="Bilingual website">
+            <span>EN</span>
+            <span class="lang-divider"></span>
+            <span class="font-telugu">తెలుగు</span>
+          </div>
+          <a href="tel:9392923516" class="hidden sm:flex items-center gap-2 btn-gold text-sm px-4 py-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            Call Now
+          </a>
+          <button id="hamburger" class="lg:hidden p-2 text-gold" aria-label="Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path id="ham-open"  d="M4 6h16M4 12h16M4 18h16"/>
+              <path id="ham-close" class="hidden" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="lg:hidden hidden pb-4 border-t border-gold/20 mt-2">
+        <ul class="flex flex-col gap-2 pt-4">
+          <li><a href="#home"     class="mob-link" onclick="closeMenu()">Home</a></li>
+          <li><a href="#about"    class="mob-link" onclick="closeMenu()">About</a></li>
+          <li><a href="#services" class="mob-link" onclick="closeMenu()">Services</a></li>
+          <li><a href="#menu"     class="mob-link" onclick="closeMenu()">Menu</a></li>
+          <li><a href="#gallery"  class="mob-link" onclick="closeMenu()">Gallery</a></li>
+          <li><a href="#reviews"  class="mob-link" onclick="closeMenu()">Reviews</a></li>
+          <li><a href="#contact"  class="mob-link" onclick="closeMenu()">Contact</a></li>
+          <li class="pt-2">
+            <a href="tel:9392923516" class="btn-gold block text-center py-2">📞 Call Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Animated background layers -->
+    <div class="hero-bg-layer1 absolute inset-0"></div>
+    <div class="hero-bg-layer2 absolute inset-0"></div>
+    <div class="hero-particles absolute inset-0 pointer-events-none"></div>
+
+    <!-- Floating Hero Biryani -->
+    <div class="absolute right-[-2%] bottom-[-2%] w-[68vw] max-w-[700px] pointer-events-none hero-bowl" aria-hidden="true">
+      <div class="hero-serve">
+        <div class="hero-serve-glow"></div>
+        <div class="hero-steam hero-steam-1"></div>
+        <div class="hero-steam hero-steam-2"></div>
+        <div class="hero-steam hero-steam-3"></div>
+        <div class="hero-serve-frame">
+          <img
+            class="hero-serve-image"
+            src="https://images.unsplash.com/photo-1631515242808-497c3fbd3972?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=88&amp;w=2400"
+            alt=""
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero-serve-shadow"></div>
+      </div>
+    </div>
+
+    <!-- Mandala / decorative motif left -->
+    <div class="absolute left-0 top-1/2 -translate-y-1/2 w-48 lg:w-80 opacity-5 pointer-events-none mandala-spin">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="150" cy="150" r="140" stroke="#C8970A" stroke-width="1"/>
+        <circle cx="150" cy="150" r="110" stroke="#C8970A" stroke-width="1"/>
+        <circle cx="150" cy="150" r="80"  stroke="#C8970A" stroke-width="1"/>
+        <circle cx="150" cy="150" r="50"  stroke="#C8970A" stroke-width="1"/>
+        <circle cx="150" cy="150" r="20"  fill="#C8970A"/>
+        <!-- Radial lines -->
+        <line x1="150" y1="10"  x2="150" y2="290" stroke="#C8970A" stroke-width="0.5"/>
+        <line x1="10"  y1="150" x2="290" y2="150" stroke="#C8970A" stroke-width="0.5"/>
+        <line x1="50"  y1="50"  x2="250" y2="250" stroke="#C8970A" stroke-width="0.5"/>
+        <line x1="250" y1="50"  x2="50"  y2="250" stroke="#C8970A" stroke-width="0.5"/>
+        <line x1="150" y1="10"  x2="150" y2="290" stroke="#C8970A" stroke-width="0.5" transform="rotate(22.5 150 150)"/>
+        <line x1="10"  y1="150" x2="290" y2="150" stroke="#C8970A" stroke-width="0.5" transform="rotate(22.5 150 150)"/>
+        <line x1="50"  y1="50"  x2="250" y2="250" stroke="#C8970A" stroke-width="0.5" transform="rotate(22.5 150 150)"/>
+        <line x1="250" y1="50"  x2="50"  y2="250" stroke="#C8970A" stroke-width="0.5" transform="rotate(22.5 150 150)"/>
+      </svg>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <!-- Top ornament -->
+      <div class="flex items-center justify-center gap-4 mb-6 hero-reveal" style="animation-delay:.2s">
+        <div class="ornament-line"></div>
+        <svg class="w-8 h-8 text-gold" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+        </svg>
+        <div class="ornament-line"></div>
+      </div>
+
+      <p class="text-gold tracking-[.3em] uppercase text-sm mb-3 hero-reveal" style="animation-delay:.3s">
+        Hyderabad's Finest Since Generations
+      </p>
+      <p class="hero-telugu hero-reveal" style="animation-delay:.34s">
+        సంప్రదాయ తెలుగు వంటల రుచి, హైదరాబాది అతిథి సత్కారం
+      </p>
+
+      <h1 class="font-display text-5xl sm:text-7xl lg:text-8xl font-black leading-none mb-4 hero-reveal" style="animation-delay:.4s">
+        <span class="text-gold block">Sri Tulasi</span>
+        <span class="text-cream block italic">Caterers</span>
+      </h1>
+
+      <div class="hero-divider my-6 hero-reveal" style="animation-delay:.5s"></div>
+
+      <p class="text-cream text-lg sm:text-2xl font-light mb-2 hero-reveal" style="animation-delay:.6s">
+        Catering Service Available For
+      </p>
+      <p class="text-gold font-display text-2xl sm:text-3xl font-bold mb-8 hero-reveal" style="animation-delay:.65s">
+        All Types of Functions
+      </p>
+      <p class="section-subcopy text-cream/85 hero-reveal" style="animation-delay:.68s">
+        వివాహాలు, శుభకార్యాలు, పుట్టినరోజులు, ఆఫీస్ ఈవెంట్లు, కుటుంబ విందులు
+      </p>
+
+      <p class="text-cream/70 text-base sm:text-lg mb-10 max-w-xl mx-auto hero-reveal" style="animation-delay:.7s">
+        Weddings · Parties · Corporate Events · Celebrations<br/>
+        Authentic Hyderabadi Dum Biryani & Royal Feasts
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 hero-reveal" style="animation-delay:.8s">
+        <a href="tel:9392923516" class="btn-hero-primary group">
+          <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          Call: 9392923516
+        </a>
+        <a href="https://wa.me/919392923516?text=Hello%2C%20I%20want%20to%20book%20catering%20services" target="_blank" rel="noopener noreferrer" class="btn-hero-whatsapp group">
+          <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          WhatsApp Us
+        </a>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="mt-16 flex flex-col items-center gap-2 opacity-60 hero-reveal" style="animation-delay:1s">
+        <span class="text-cream text-xs tracking-widest uppercase">Scroll to explore</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="py-24 lg:py-32 relative overflow-hidden bg-forest">
+    <div class="section-bg-pattern absolute inset-0 opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Illustration Side -->
+        <div class="relative flex justify-center order-2 lg:order-1">
+          <div class="about-card-glow relative w-80 h-80 sm:w-96 sm:h-96">
+            <!-- Chef Illustration SVG -->
+            <svg viewBox="0 0 320 360" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-2xl">
+              <!-- Chef hat -->
+              <ellipse cx="160" cy="115" rx="60" ry="12" fill="#FDF6E3"/>
+              <rect x="100" y="50" width="120" height="70" rx="10" fill="#FDF6E3"/>
+              <ellipse cx="160" cy="50" rx="40" ry="20" fill="white"/>
+              <!-- Head -->
+              <ellipse cx="160" cy="145" rx="45" ry="48" fill="#F5CBA7"/>
+              <!-- Face features -->
+              <ellipse cx="148" cy="140" rx="5" ry="6" fill="#3D1A0A"/>
+              <ellipse cx="172" cy="140" rx="5" ry="6" fill="#3D1A0A"/>
+              <ellipse cx="149" cy="139" rx="2" ry="2" fill="white"/>
+              <ellipse cx="173" cy="139" rx="2" ry="2" fill="white"/>
+              <path d="M150 158 Q160 166 170 158" stroke="#C87050" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <!-- Moustache -->
+              <path d="M148 152 Q155 156 160 152 Q165 156 172 152" stroke="#3D1A0A" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <!-- Neck -->
+              <rect x="148" y="190" width="24" height="20" rx="4" fill="#F5CBA7"/>
+              <!-- Chef uniform body -->
+              <path d="M80 210 Q100 200 140 200 Q160 200 160 210 Q160 200 180 200 Q220 200 240 210 L250 310 Q200 320 160 320 Q120 320 70 310 Z" fill="white"/>
+              <!-- Uniform collar -->
+              <path d="M140 200 L145 220 L160 230 L175 220 L180 200" fill="#FDF6E3" stroke="#ddd" stroke-width="1"/>
+              <!-- Buttons -->
+              <circle cx="160" cy="240" r="3" fill="#C8970A"/>
+              <circle cx="160" cy="260" r="3" fill="#C8970A"/>
+              <circle cx="160" cy="280" r="3" fill="#C8970A"/>
+              <!-- Left arm holding spoon -->
+              <path d="M80 215 Q50 225 45 260 Q43 280 60 285" stroke="#F5CBA7" stroke-width="22" stroke-linecap="round" fill="none"/>
+              <path d="M80 215 Q50 225 45 260 Q43 280 60 285" stroke="white" stroke-width="18" stroke-linecap="round" fill="none"/>
+              <!-- Spoon -->
+              <line x1="62" y1="285" x2="40" y2="250" stroke="#C8970A" stroke-width="4" stroke-linecap="round"/>
+              <ellipse cx="37" cy="245" rx="8" ry="6" fill="#C8970A"/>
+              <!-- Right arm holding pot lid -->
+              <path d="M240 215 Q270 225 275 260 Q277 280 260 285" stroke="#F5CBA7" stroke-width="22" stroke-linecap="round" fill="none"/>
+              <path d="M240 215 Q270 225 275 260 Q277 280 260 285" stroke="white" stroke-width="18" stroke-linecap="round" fill="none"/>
+              <!-- Pot lid -->
+              <ellipse cx="265" cy="270" rx="28" ry="8" fill="#8B4A20"/>
+              <ellipse cx="265" cy="267" rx="28" ry="8" fill="#A05A28"/>
+              <ellipse cx="265" cy="265" rx="10" ry="4" fill="#C8970A"/>
+              <!-- Name badge -->
+              <rect x="125" y="248" width="70" height="22" rx="4" fill="#1A4A2E"/>
+              <text x="160" y="263" text-anchor="middle" font-size="8" fill="#C8970A" font-family="serif" font-weight="bold">Sri Tulasi</text>
+              <!-- Decorative dots on hat -->
+              <circle cx="130" cy="70" r="3" fill="#C8970A"/>
+              <circle cx="145" cy="60" r="3" fill="#C8970A"/>
+              <circle cx="160" cy="58" r="3" fill="#C8970A"/>
+              <circle cx="175" cy="60" r="3" fill="#C8970A"/>
+              <circle cx="190" cy="70" r="3" fill="#C8970A"/>
+            </svg>
+            <!-- Glow ring -->
+            <div class="absolute inset-0 rounded-full border-2 border-gold/30 scale-110 animate-pulse-slow"></div>
+          </div>
+          <!-- Floating spice badges -->
+          <div class="spice-badge absolute top-8 -right-4 lg:right-4">🌿 Fresh Spices</div>
+          <div class="spice-badge absolute bottom-16 -left-4 lg:left-0">🌶️ Authentic Masala</div>
+        </div>
+
+        <!-- Text Side -->
+        <div class="order-1 lg:order-2">
+        <div class="section-tag">Our Story</div>
+        <h2 class="section-heading text-cream">
+          A Family Legacy of <em class="text-gold not-italic">Royal Flavors</em>
+        </h2>
+        <p class="section-subcopy text-cream/80">మా ఇంటి వంట సంప్రదాయం, మీ శుభకార్యానికి ప్రత్యేక విందు</p>
+          <div class="gold-divider my-6"></div>
+
+          <p class="text-cream/80 text-lg leading-relaxed mb-5">
+            Sri Tulasi Caterers is a proud family-run business rooted in generations of culinary tradition. What began in small village hotels has grown into a modern catering and cloud kitchen service, while staying true to our authentic Telangana flavors.
+          </p>
+          <p class="text-cream/80 text-lg leading-relaxed mb-5">
+            Our journey is built on home-ground masalas and treasured family recipes passed down through our elders. Cooking has always been a part of our family’s identity, shaped by the dedication of our fathers and grandfathers.
+          </p>
+          <p class="text-cream/80 text-lg leading-relaxed mb-5">
+            Carrying this legacy forward, <strong class="text-gold">Mr. Srinivas</strong> followed his passion for food, inspired by his family’s deep connection to the industry. With the constant support and strength of <strong class="text-goldlt">Mrs. Tulasi</strong>, together they have nurtured and grown Sri Tulasi Caterers into what it is today.
+          </p>
+          <p class="text-cream/80 text-lg leading-relaxed mb-8">
+            Blending tradition with modern techniques, we are committed to delivering quality, authenticity, and memorable experiences in every dish we serve.
+          </p>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-6">
+            <div class="stat-card">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Events Catered</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Signature Dishes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="py-24 lg:py-32 bg-cream relative">
+    <div class="paisley-bg absolute inset-0 opacity-[0.03]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="section-tag-dark">What We Offer</div>
+        <h2 class="section-heading-dark">
+          Catering for Every <em class="text-saffron not-italic">Occasion</em>
+        </h2>
+        <p class="section-subcopy text-spice/75">ప్రతి వేడుకకు రుచికరమైన తెలుగు, హైదరాబాది మెనూ</p>
+        <div class="gold-divider mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Wedding -->
+        <div class="service-card group" data-delay="0">
+          <div class="service-icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16">
+              <circle cx="40" cy="40" r="38" fill="#1A4A2E" stroke="#C8970A" stroke-width="1.5"/>
+              <!-- Rings -->
+              <circle cx="32" cy="38" r="10" stroke="#C8970A" stroke-width="2" fill="none"/>
+              <circle cx="48" cy="38" r="10" stroke="#C8970A" stroke-width="2" fill="none"/>
+              <!-- Flowers on rings -->
+              <circle cx="32" cy="28" r="3" fill="#E8620A"/>
+              <circle cx="48" cy="28" r="3" fill="#E8620A"/>
+              <!-- Banana leaves -->
+              <path d="M20 55 Q40 45 60 55" stroke="#2D7A4F" stroke-width="3" fill="none"/>
+              <path d="M25 58 Q40 50 55 58" stroke="#2D7A4F" stroke-width="2" fill="none"/>
+              <!-- Stars -->
+              <circle cx="40" cy="20" r="2" fill="#F5D060"/>
+              <circle cx="22" cy="32" r="1.5" fill="#F5D060"/>
+              <circle cx="58" cy="32" r="1.5" fill="#F5D060"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Wedding Catering</h3>
+          <p class="service-desc">Grand feasts for your most special day — from the Muhurtham breakfast to the grand reception dinner.</p>
+          <ul class="service-features">
+            <li>✦ Sadhya-style banana leaf</li>
+            <li>✦ Live counters</li>
+            <li>✦ Dum biryani station</li>
+          </ul>
+        </div>
+
+        <!-- Corporate -->
+        <div class="service-card group" data-delay="100">
+          <div class="service-icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16">
+              <circle cx="40" cy="40" r="38" fill="#1A4A2E" stroke="#C8970A" stroke-width="1.5"/>
+              <rect x="22" y="30" width="36" height="28" rx="3" fill="none" stroke="#C8970A" stroke-width="2"/>
+              <path d="M30 30 V26 Q30 22 34 22 H46 Q50 22 50 26 V30" stroke="#C8970A" stroke-width="2" fill="none"/>
+              <path d="M22 42 H58" stroke="#C8970A" stroke-width="1.5"/>
+              <circle cx="40" cy="42" r="4" fill="#E8620A"/>
+              <rect x="28" y="50" width="8" height="2" rx="1" fill="#F5D060"/>
+              <rect x="44" y="50" width="8" height="2" rx="1" fill="#F5D060"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Corporate Events</h3>
+          <p class="service-desc">Professional catering for office parties, product launches, team lunches and conferences.</p>
+          <ul class="service-features">
+            <li>✦ Buffet & box meals</li>
+            <li>✦ Hi-tea arrangements</li>
+            <li>✦ Customised menus</li>
+          </ul>
+        </div>
+
+        <!-- Birthday -->
+        <div class="service-card group" data-delay="200">
+          <div class="service-icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16">
+              <circle cx="40" cy="40" r="38" fill="#1A4A2E" stroke="#C8970A" stroke-width="1.5"/>
+              <!-- Cake -->
+              <rect x="20" y="46" width="40" height="16" rx="3" fill="#C8970A"/>
+              <rect x="24" y="36" width="32" height="12" rx="3" fill="#E8A030"/>
+              <!-- Frosting -->
+              <path d="M20 46 Q24 42 28 46 Q32 42 36 46 Q40 42 44 46 Q48 42 52 46 Q56 42 60 46" stroke="#FDF6E3" stroke-width="2" fill="none"/>
+              <!-- Candles -->
+              <rect x="30" y="28" width="4" height="10" rx="1" fill="#E8620A"/>
+              <rect x="38" y="26" width="4" height="12" rx="1" fill="#8B1A1A"/>
+              <rect x="46" y="28" width="4" height="10" rx="1" fill="#E8620A"/>
+              <!-- Flames -->
+              <ellipse cx="32" cy="27" rx="3" ry="4" fill="#F5D060"/>
+              <ellipse cx="40" cy="25" rx="3" ry="4" fill="#F5D060"/>
+              <ellipse cx="48" cy="27" rx="3" ry="4" fill="#F5D060"/>
+              <!-- Stars -->
+              <text x="23" y="57" font-size="8" fill="#FDF6E3">♥</text>
+              <text x="50" y="57" font-size="8" fill="#FDF6E3">♥</text>
+            </svg>
+          </div>
+          <h3 class="service-title">Birthday Parties</h3>
+          <p class="service-desc">Make every birthday memorable with our joyful, flavourful spreads for kids and adults alike.</p>
+          <ul class="service-features">
+            <li>✦ Snacks & starters</li>
+            <li>✦ Sweets & desserts</li>
+            <li>✦ Custom cake options</li>
+          </ul>
+        </div>
+
+        <!-- All Functions -->
+        <div class="service-card group" data-delay="300">
+          <div class="service-icon">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16">
+              <circle cx="40" cy="40" r="38" fill="#1A4A2E" stroke="#C8970A" stroke-width="1.5"/>
+              <!-- Serving dish -->
+              <ellipse cx="40" cy="48" rx="24" ry="6" fill="#8B4A20"/>
+              <ellipse cx="40" cy="44" rx="24" ry="6" fill="#A05A28"/>
+              <ellipse cx="40" cy="40" rx="22" ry="5" fill="#C8970A"/>
+              <ellipse cx="40" cy="38" rx="20" ry="4" fill="#E8A030"/>
+              <!-- Lid handle -->
+              <path d="M34 40 Q40 30 46 40" stroke="#C8970A" stroke-width="2" fill="none"/>
+              <circle cx="40" cy="30" r="4" fill="#C8970A"/>
+              <!-- Star sparkles -->
+              <text x="20" y="32" font-size="10" fill="#F5D060">✦</text>
+              <text x="55" y="34" font-size="10" fill="#F5D060">✦</text>
+              <text x="38" y="22" font-size="8"  fill="#F5D060">✦</text>
+            </svg>
+          </div>
+          <h3 class="service-title">All Functions</h3>
+          <p class="service-desc">Engagements, Griha Pravesh, Namakaran, Satyanarayana Puja, and every auspicious occasion.</p>
+          <ul class="service-features">
+            <li>✦ Veg & Non-veg menus</li>
+            <li>✦ South Indian thali</li>
+            <li>✦ Sweet counters</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Book Banner -->
+      <div class="book-banner mt-16 text-center">
+        <p class="text-cream/90 text-xl mb-4">Ready to book for your upcoming event?</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="tel:9392923516" class="btn-gold">📞 9392923516</a>
+          <a href="tel:9989984687" class="btn-outline">📞 9989984687</a>
+          <a href="https://wa.me/919392923516?text=Hello%2C%20I%20want%20to%20book%20catering" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-sm">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MENU ===================== -->
+  <section id="menu" class="py-24 lg:py-32 bg-spice relative overflow-hidden">
+    <div class="absolute inset-0 menu-texture opacity-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <div class="section-tag">Our Specialities</div>
+        <h2 class="section-heading text-cream">
+          Feast of <em class="text-gold not-italic">Royal Flavors</em>
+        </h2>
+        <p class="section-subcopy text-cream/80">శాకాహారం, మాంసాహారం, వివాహ ప్యాకేజీలు, ఈవెంట్ ప్రత్యేక మెనూలు</p>
+        <div class="gold-divider mx-auto mt-6"></div>
+      </div>
+
+      <div class="menu-package-grid mb-12">
+        <article class="menu-package-card">
+          <div class="menu-package-kicker">Wedding Menu</div>
+          <h3>Telugu Pelli Bhojanam</h3>
+          <p>Banana leaf service, welcome drinks, starters, biryani, sweets and live counters.</p>
+          <span>150+ guests</span>
+        </article>
+        <article class="menu-package-card">
+          <div class="menu-package-kicker">Family Functions</div>
+          <h3>Housewarming & Puja Menu</h3>
+          <p>Pulihora, garelu, curries, rice, dal, chutneys, desserts and service staff.</p>
+          <span>50-200 guests</span>
+        </article>
+        <article class="menu-package-card">
+          <div class="menu-package-kicker">Premium Event</div>
+          <h3>Biryani & Live Counter Menu</h3>
+          <p>Dum biryani, kebabs, tawa starters, dessert station and buffet presentation.</p>
+          <span>Custom event package</span>
+        </article>
+      </div>
+
+      <!-- Menu Toggle -->
+      <div class="flex justify-center mb-10">
+        <div class="menu-toggle">
+          <button id="btn-veg"    class="menu-toggle-btn active" onclick="showMenu('veg')">🌿 Vegetarian</button>
+          <button id="btn-nonveg" class="menu-toggle-btn"        onclick="showMenu('nonveg')">🍗 Non-Vegetarian</button>
+        </div>
+      </div>
+
+      <!-- Veg Menu -->
+      <div id="menu-veg" class="menu-grid">
+        <div class="menu-category">
+          <img class="menu-card-photo" src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=90&amp;w=1600" alt="Vegetable biryani served in a bowl" loading="lazy" />
+          <h3 class="menu-cat-title">🍚 Rice & Biryani</h3>
+          <ul class="menu-items">
+            <li><span class="menu-item">Vegetable Dum Biryani</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Jeera Rice</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Pulao</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+          </ul>
+        </div>
+        <div class="menu-category">
+          <img class="menu-card-photo" src="https://images.unsplash.com/photo-1701579231378-3726490a407b?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=90&amp;w=1600" alt="Paneer butter masala in rich gravy" loading="lazy" />
+          <h3 class="menu-cat-title">🍛 Curries</h3>
+          <ul class="menu-items">
+            <li><span class="menu-item">Paneer Butter Masala</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Dal Tadka</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Aloo Gobi</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Mixed Veg Kurma</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+          </ul>
+        </div>
+        <div class="menu-category">
+          <img class="menu-card-photo" src="https://images.unsplash.com/photo-1743615467363-250466982515?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=90&amp;w=1600" alt="Masala dosa with chutneys" loading="lazy" />
+          <h3 class="menu-cat-title">🫓 Breads & Starters</h3>
+          <ul class="menu-items">
+            <li><span class="menu-item">Tandoori Roti / Naan</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Samosa</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Mirchi Bajji</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Punugulu</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+          </ul>
+        </div>
+        <div class="menu-category">
+          <img class="menu-card-photo" src="https://images.unsplash.com/photo-1593701461250-d7b22dfd3a77?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=90&amp;w=1600" alt="Indian sweets including gulab jamun" loading="lazy" />
+          <h3 class="menu-cat-title">🍮 Sweets & Desserts</h3>
+          <ul class="menu-items">
+            <li><span class="menu-item">Double Ka Meetha</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Qubani Ka Meetha</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Gulab Jamun</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Kheer</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+          </ul>
+        </div>
+        <div class="menu-category">
+          <img class="menu-card-photo" src="https://images.unsplash.com/photo-1742281257687-092746ad6021?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=90&amp;w=1600" alt="Traditional Indian salad and side dish arrangement" loading="lazy" />
+          <h3 class="menu-cat-title">🥗 Salads & Raita</h3>
+          <ul class="menu-items">
+            <li><span class="menu-item">Burani Raita</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Kachumber Salad</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Onion Raita</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+          </ul>
+        </div>
+        <div class="menu-category">
+          <img class="menu-card-photo" src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=90&amp;w=1600" alt="Refreshing drinks served in glasses" loading="lazy" />
+          <h3 class="menu-cat-title">🥤 Beverages</h3>
+          <ul class="menu-items">
+            <li><span class="menu-item">Lassi</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Sharbat / Jaljeera</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+            <li><span class="menu-item">Fresh Lime Soda</span><span class="menu-dot"></span><span class="veg-dot"></span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Non-Veg Menu -->
+      <div id="menu-nonveg" class="menu-grid hidden">
+        <div class="menu-category">
+          <img class="menu-card-photo" src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=90&amp;w=1600" alt="Chicken dum biryani with garnish" loading="lazy" />
+          <h3 class="menu-cat-title">🍚 Biryani & Rice</h3>
+          <ul class="menu-items">
+            <li><span class="menu-item">Hyderabadi Chicken Dum Biryani</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+            <li><span class="menu-item">Mutton Dum Biryani</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+            <li><span class="menu-item">Egg Biryani</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+          </ul>
+        </div>
+        <div class="menu-category">
+          <img class="menu-card-photo" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=90&amp;w=1600" alt="Spiced chicken dish plated with garnish" loading="lazy" />
+          <h3 class="menu-cat-title">🍗 Chicken Dishes</h3>
+          <ul class="menu-items">
+            <li><span class="menu-item">Chicken Curry (Gravy)</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+            <li><span class="menu-item">Chicken 65 (Starter)</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+            <li><span class="menu-item">Chicken Tikka Masala</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+            <li><span class="menu-item">Chicken Kebab</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+          </ul>
+        </div>
+        <div class="menu-category">
+          <img class="menu-card-photo" src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=90&amp;w=1600" alt="Mutton curry in a bowl" loading="lazy" />
+          <h3 class="menu-cat-title">🐑 Mutton Dishes</h3>
+          <ul class="menu-items">
+            <li><span class="menu-item">Mutton Curry</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+            <li><span class="menu-item">Mutton Fry</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+            <li><span class="menu-item">Nalli Nihari</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+          </ul>
+        </div>
+        <div class="menu-category">
+          <img class="menu-card-photo" src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=90&amp;w=1600" alt="Seafood dish plated for service" loading="lazy" />
+          <h3 class="menu-cat-title">🐟 Fish & Seafood</h3>
+          <ul class="menu-items">
+            <li><span class="menu-item">Fish Curry</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+            <li><span class="menu-item">Prawn Masala</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+            <li><span class="menu-item">Fish Fry (Starter)</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+          </ul>
+        </div>
+        <div class="menu-category">
+          <img class="menu-card-photo" src="https://images.unsplash.com/photo-1593701461250-d7b22dfd3a77?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=90&amp;w=1600" alt="Indian dessert assortment" loading="lazy" />
+          <h3 class="menu-cat-title">🍮 Sweets</h3>
+          <ul class="menu-items">
+            <li><span class="menu-item">Double Ka Meetha</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+            <li><span class="menu-item">Qubani Ka Meetha</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+            <li><span class="menu-item">Ice Cream Station</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+          </ul>
+        </div>
+        <div class="menu-category">
+          <img class="menu-card-photo" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=90&amp;w=1600" alt="Naan and side accompaniments served together" loading="lazy" />
+          <h3 class="menu-cat-title">🫓 Accompaniments</h3>
+          <ul class="menu-items">
+            <li><span class="menu-item">Naan / Roomali Roti</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+            <li><span class="menu-item">Burani Raita</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+            <li><span class="menu-item">Mirchi Ka Salan</span><span class="menu-dot"></span><span class="nonveg-dot"></span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="text-center text-cream/50 text-sm mt-8 italic">* Menu items are customisable. Contact us for a tailored menu for your event.</p>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section id="gallery" class="py-24 lg:py-32 bg-cream relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="section-tag-dark">Visual Feast</div>
+        <h2 class="section-heading-dark">
+          Our <em class="text-saffron not-italic">Gallery</em>
+        </h2>
+        <p class="section-subcopy text-spice/75">నిజమైన వంటల ఫోటోలు, తెలుగు ఫుడ్ స్టైల్ ప్రెజెంటేషన్</p>
+        <div class="gold-divider mx-auto mt-6"></div>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item gallery-item-large group">
+          <img class="gallery-photo" src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=88&amp;w=2400" alt="Rich Hyderabadi chicken dum biryani served with long basmati rice and garnish" loading="lazy" />
+          <figcaption class="gallery-overlay">
+            <span>Signature Dum Biryani</span>
+            <small>లాంగ్ బాస్మతి రైస్‌తో రిచ్ హైదరాబాది బిర్యానీ</small>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item group">
+          <img class="gallery-photo" src="https://images.unsplash.com/photo-1742281257687-092746ad6021?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=2400" alt="Traditional South Indian thali served on a steel plate with rice and sides" loading="lazy" />
+          <figcaption class="gallery-overlay">
+            <span>Traditional Telugu Thali</span>
+            <small>పెళ్లి &amp; శుభకార్యాలకు అరటి ఆకు/ప్లేట్ సర్వీస్</small>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item group">
+          <img class="gallery-photo" src="https://images.unsplash.com/photo-1743615467363-250466982515?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=2400" alt="Masala dosa with chutneys served on a banana leaf lined tray" loading="lazy" />
+          <figcaption class="gallery-overlay">
+            <span>Masala Dosa Service</span>
+            <small>దోస, చట్నీ, సాంబార్ స్టేషన్</small>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item group">
+          <img class="gallery-photo" src="https://images.unsplash.com/photo-1701579231378-3726490a407b?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=2400" alt="Paneer butter masala served with naan in a rich red gravy" loading="lazy" />
+          <figcaption class="gallery-overlay">
+            <span>Paneer Butter Masala</span>
+            <small>శాకాహార వేడుకల ఫేవరెట్</small>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item group">
+          <img class="gallery-photo" src="https://images.unsplash.com/photo-1631452180539-96aca7d48617?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=2400" alt="Paneer curry with rice and roti arranged for catering presentation" loading="lazy" />
+          <figcaption class="gallery-overlay">
+            <span>Family Function Curry Spread</span>
+            <small>కుటుంబ విందులకు సాఫ్ట్, రిచ్ కర్రీ మెను</small>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item group">
+          <img class="gallery-photo" src="https://images.unsplash.com/photo-1593701461250-d7b22dfd3a77?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=2400" alt="Freshly made gulab jamun being lifted from hot syrup" loading="lazy" />
+          <figcaption class="gallery-overlay">
+            <span>Gulab Jamun &amp; Sweets</span>
+            <small>తాజాగా చేసిన మిఠాయిలు</small>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item group">
+          <img class="gallery-photo" src="https://images.unsplash.com/photo-1751651054934-3fbdf1d54d8b?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=2400" alt="Premium buffet counter setup for event catering" loading="lazy" />
+          <figcaption class="gallery-overlay">
+            <span>Premium Buffet Presentation</span>
+            <small>ఈవెంట్ బఫే సెటప్ &amp; సర్వీస్</small>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REVIEWS ===================== -->
+  <section id="reviews" class="py-24 lg:py-32 bg-cream relative overflow-hidden">
+    <div class="paisley-bg absolute inset-0 opacity-[0.03]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <div class="review-pill">Customer Love</div>
+        <h2 class="section-heading-dark">
+          Telangana Style <em class="text-saffron not-italic">Appreciation</em>
+        </h2>
+        <p class="section-subcopy text-spice/75">మనస్ఫూర్తిగా మెచ్చుకున్న కుటుంబాలు, పెళ్లిళ్లు, శుభకార్యాల నుంచి వచ్చిన అభిప్రాయాలు</p>
+        <div class="gold-divider mx-auto mt-6"></div>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="review-head">
+            <div class="review-stars" aria-label="5 star feedback">★★★★★</div>
+            <div class="review-google">G</div>
+          </div>
+          <p class="review-copy">
+            "మా పెళ్లి ఫంక్షన్‌కి వచ్చిన ప్రతి ఒక్కరూ బిర్యానీ గురించే మాట్లాడారు. రైస్ ఒక్కో గింజ ప్రత్యేకంగా, రుచి మాత్రం అసలు హైదరాబాద్ స్టైల్లో అద్భుతంగా ఉంది."
+          </p>
+          <div class="review-meta">
+            <strong>Swapna Family</strong>
+            <span>LB Nagar Wedding Catering</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-head">
+            <div class="review-stars" aria-label="5 star feedback">★★★★★</div>
+            <div class="review-google">G</div>
+          </div>
+          <p class="review-copy">
+            "సర్వింగ్ చాలా neat ga undi, staff respectful ga handle chesaru, sweets nunchi starters varaku full satisfaction. Mana intlo function la feel vachindi."
+          </p>
+          <div class="review-meta">
+            <strong>Raju Garu</strong>
+            <span>Hayathnagar Housewarming</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-head">
+            <div class="review-stars" aria-label="5 star feedback">★★★★★</div>
+            <div class="review-google">G</div>
+          </div>
+          <p class="review-copy">
+            "Corporate event ani routine buffet laga kaadu, chala rich ga present chesaru. Paneer, biryani, dessert counter anni premium ga kanipinchayi and taste kuda super."
+          </p>
+          <div class="review-meta">
+            <strong>Team Lead, Madhapur</strong>
+            <span>Office Event Catering</span>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="py-24 lg:py-32 bg-forest relative overflow-hidden">
+    <div class="section-bg-pattern absolute inset-0 opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="section-heading text-cream">
+          Book Your <em class="text-gold not-italic">Event</em>
+        </h2>
+        <p class="section-subcopy text-cream/80">ఇప్పుడు కాల్ చేయండి లేదా వాట్సాప్‌లో మీ ఫంక్షన్ వివరాలు పంపండి</p>
+        <div class="gold-divider mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+
+        <!-- Left: Contact Info + Map -->
+        <div>
+          <!-- Info Cards -->
+          <div class="space-y-5 mb-8">
+            <div class="contact-info-card">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-label">Our Location</div>
+                <div class="contact-value">Yadadri Nagar, Road No. 1, Munganoor,<br/>Hayathnagar, Hyderabad – 501511,<br/>Telangana, India</div>
+              </div>
+            </div>
+            <a href="tel:9392923516" class="contact-info-card hover:border-gold/60 transition-colors cursor-pointer">
+              <div class="contact-icon">📞</div>
+              <div>
+                <div class="contact-label">Primary Phone</div>
+                <div class="contact-value text-gold text-xl font-bold">+91 9392923516</div>
+              </div>
+            </a>
+            <a href="tel:9989984687" class="contact-info-card hover:border-gold/60 transition-colors cursor-pointer">
+              <div class="contact-icon">📞</div>
+              <div>
+                <div class="contact-label">Secondary Phone</div>
+                <div class="contact-value text-gold text-xl font-bold">+91 9989984687</div>
+              </div>
+            </a>
+            <a href="https://wa.me/919392923516" target="_blank" rel="noopener noreferrer" class="contact-info-card hover:border-gold/60 transition-colors cursor-pointer">
+              <div class="contact-icon">💬</div>
+              <div>
+                <div class="contact-label">WhatsApp</div>
+                <div class="contact-value text-green-400 font-semibold">Chat with us on WhatsApp</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Google Maps embed -->
+          <div class="map-container rounded-2xl overflow-hidden border border-gold/20">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.0890!2d78.6170!3d17.3250!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDE5JzMwLjAiTiA3OMKwMzcnMDEuMiJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              width="100%"
+              height="250"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Sri Tulasi Caterers Location – Hayathnagar, Hyderabad">
+            </iframe>
+          </div>
+          <div class="mt-4">
+            <a href="https://maps.google.com/?q=Yadadri+Nagar+Road+No+1+Munganoor+Hayathnagar+Hyderabad+501511" target="_blank" rel="noopener noreferrer" class="btn-outline">Open in Google Maps</a>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form-card">
+          <h3 class="text-gold font-display text-2xl font-bold mb-6">Send Us a Message</h3>
+          <form id="contact-form" class="space-y-5">
+            <div class="form-group">
+              <label class="form-label">Your Name *</label>
+              <input type="text" id="f-name" required class="form-input" placeholder="Enter your name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number *</label>
+              <input type="tel" id="f-phone" required class="form-input" placeholder="10-digit mobile number" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Type of Event</label>
+              <select id="f-event" class="form-input">
+                <option value="">Select event type</option>
+                <option>Wedding</option>
+                <option>Birthday Party</option>
+                <option>Corporate Event</option>
+                <option>Engagement</option>
+                <option>Housewarming</option>
+                <option>Other Function</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Number of Guests (approx.)</label>
+              <input type="number" id="f-guests" class="form-input" placeholder="e.g. 200" min="1" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea id="f-msg" class="form-input" rows="4" placeholder="Tell us about your event, date, location…"></textarea>
+            </div>
+            <button type="submit" class="btn-gold w-full py-3 text-base">
+              Send Message 🚀
+            </button>
+            <div id="form-success" class="hidden text-center text-green-400 font-semibold pt-2">
+              ✅ Thank you! We'll contact you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-spice py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-3 gap-8 text-center sm:text-left">
+        <!-- Brand -->
+        <div>
+          <div class="text-gold font-display font-bold text-2xl mb-2">Sri Tulasi Caterers</div>
+          <div class="text-cream/60 text-sm leading-relaxed">
+            Miryala Srinivas<br/>
+            Authentic Hyderabadi Catering<br/>
+            Hayathnagar, Telangana
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <div class="text-gold font-semibold mb-3 uppercase tracking-widest text-sm">Quick Links</div>
+          <ul class="space-y-1 text-cream/60 text-sm">
+            <li><a href="#home"     class="hover:text-gold transition-colors">Home</a></li>
+            <li><a href="#about"    class="hover:text-gold transition-colors">About Us</a></li>
+            <li><a href="#services" class="hover:text-gold transition-colors">Services</a></li>
+            <li><a href="#menu"     class="hover:text-gold transition-colors">Menu</a></li>
+            <li><a href="#reviews"  class="hover:text-gold transition-colors">Reviews</a></li>
+            <li><a href="#contact"  class="hover:text-gold transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <div class="text-gold font-semibold mb-3 uppercase tracking-widest text-sm">Contact</div>
+          <div class="space-y-1 text-cream/60 text-sm">
+            <div><a href="tel:9392923516" class="hover:text-gold transition-colors">📞 9392923516</a></div>
+            <div><a href="tel:9989984687" class="hover:text-gold transition-colors">📞 9989984687</a></div>
+            <div><a href="https://wa.me/919392923516" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">💬 WhatsApp</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-service-areas">
+        <div class="text-gold font-semibold mb-3 uppercase tracking-widest text-sm">Areas We Serve In Hyderabad</div>
+        <p class="footer-areas-list text-cream/60 text-sm">
+          Hyderabad | Secunderabad | Banjara Hills | Dilsukhnagar | Koti | Punjagutta | Begumpet | Jubilee Hills | Mehdipatnam | Ameerpet | Abids | Amberpet | Attapur | Auto Nagar | Lingampally | Balapur | Bandlaguda | Barkatpura | Basheer Bagh | BHEL | Borabanda | Chaderghat | Champapet | Chanda Nagar | Charminar | Dilsukhnagar | ECIL | Erragadda | Falaknuma | Film Nagar | Gachibowli | Gandhipet | Hayathnagar | Hitech City | Himayat Nagar | Himayat Sagar | Ibrahimpatnam | Jeedimetla | Kachiguda | Karmanghat | Khairatabad | Kompally | Kondapur | Kothapet | Kukatpally Housing Board Colony | LB Nagar | Langer House | Madhapur | Miyapur | Nagole | Nampally | Pragathi Nagar | Narayanguda | Panjagutta | Paradise | Saifabad | Tarnaka | Vanasthalipuram
+        </p>
+      </div>
+      <div class="border-t border-gold/20 mt-8 pt-8 text-center text-cream/30 text-xs">
+        © 2026 Sri Tulasi Caterers. All Rights Reserved. | Hayathnagar, Hyderabad, Telangana 501511
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== FLOATING WHATSAPP ===================== -->
+  <a href="https://wa.me/919392923516?text=Hello%2C%20I%20want%20to%20book%20catering%20services%20from%20Sri%20Tulasi%20Caterers"
+     target="_blank"
+     class="whatsapp-fab"
+     rel="noopener noreferrer"
+     title="WhatsApp Us"
+     aria-label="Chat on WhatsApp to book catering">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-label">Book Now</span>
+  </a>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
