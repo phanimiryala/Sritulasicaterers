@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initScrollActiveNav();
   initContactForm();
+  initHeroParallax();
+  initGalleryLightbox();
 });
 
 
@@ -276,9 +278,75 @@ function initContactForm() {
   });
 }
 
+/* =========================================================
+   7. HERO PARALLAX
+   ========================================================= */
+function initHeroParallax() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const background = document.querySelector('.site-photo-bg');
+  if (!background) return;
+
+  const onScroll = () => {
+    const offset = Math.min(window.scrollY * 0.08, 32);
+    background.style.transform = `scale(1.04) translateY(${offset}px)`;
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
 
 /* =========================================================
-   7. SMOOTH SCROLL for anchor links
+   8. GALLERY LIGHTBOX
+   ========================================================= */
+function initGalleryLightbox() {
+  const lightbox = document.getElementById('gallery-lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxTitle = document.getElementById('lightbox-title');
+  const lightboxCopy = document.getElementById('lightbox-copy');
+  const closeButton = document.getElementById('lightbox-close');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  if (!lightbox || !lightboxImage || !lightboxTitle || !lightboxCopy || !galleryItems.length) return;
+
+  const closeLightbox = () => {
+    lightbox.classList.add('hidden');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  galleryItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      const image = item.querySelector('.gallery-photo');
+      const title = item.querySelector('.gallery-overlay span');
+      const copy = item.querySelector('.gallery-overlay small');
+      if (!image || !title) return;
+
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt || title.textContent.trim();
+      lightboxTitle.textContent = title.textContent.trim();
+      lightboxCopy.textContent = copy ? copy.textContent.trim() : '';
+      lightbox.classList.remove('hidden');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  closeButton?.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+      closeLightbox();
+    }
+  });
+}
+
+
+/* =========================================================
+   9. SMOOTH SCROLL for anchor links
    (Handles the offset created by the sticky navbar)
    ========================================================= */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

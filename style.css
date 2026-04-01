@@ -50,7 +50,7 @@ body > * {
   height: 100%;
   background-image:
     linear-gradient(180deg, rgba(6, 12, 9, 0.18), rgba(6, 12, 9, 0.18)),
-    url("assets/biryani-background.jpg");
+    url("assets/background-mario-raj.jpg");
   background-size: cover;
   background-position: center center;
   transform: scale(1.04);
@@ -277,6 +277,40 @@ body > * {
   position: relative;
 }
 
+.hero-content-shell {
+  padding: 2.5rem 1.5rem 3rem;
+  border-radius: 36px;
+  background:
+    linear-gradient(180deg, rgba(10, 22, 16, 0.42), rgba(10, 22, 16, 0.18)),
+    radial-gradient(circle at top, rgba(245, 208, 96, 0.08), transparent 34%);
+  border: 1px solid rgba(245, 208, 96, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.26);
+}
+
+.hero-aura {
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.32;
+  pointer-events: none;
+}
+
+.hero-aura-left {
+  left: -8rem;
+  top: 18%;
+  background: radial-gradient(circle, rgba(26, 74, 46, 0.85), transparent 70%);
+}
+
+.hero-aura-right {
+  right: -7rem;
+  bottom: 10%;
+  background: radial-gradient(circle, rgba(232, 98, 10, 0.58), transparent 68%);
+}
+
 .hero-bg-layer1 {
   background:
     radial-gradient(ellipse 80% 60% at 30% 50%, rgba(26,74,46,0.8) 0%, transparent 70%),
@@ -461,6 +495,26 @@ body > * {
   font-family: 'Tiro Telugu', serif;
   font-size: clamp(1rem, 2.4vw, 1.3rem);
   margin-bottom: 0.75rem;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1.4rem;
+}
+
+.hero-highlight-pill {
+  padding: 0.62rem 1rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(245,208,96,0.16);
+  color: rgba(253,246,227,0.86);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 /* Scroll arrow */
@@ -811,20 +865,53 @@ footer {
 .menu-category {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(200,151,10,0.2);
-  border-radius: 16px;
+  border-radius: 22px;
   padding: 1rem;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
-.menu-category:hover { background: rgba(255,255,255,0.08); }
+.menu-category:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-6px);
+  border-color: rgba(245,208,96,0.34);
+  box-shadow: 0 24px 50px rgba(0,0,0,0.2);
+}
+
+.menu-card-photo-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
 
 .menu-card-photo {
   width: 100%;
   height: 180px;
   object-fit: cover;
   display: block;
-  border-radius: 12px;
-  margin-bottom: 1rem;
+  transition: transform 0.75s cubic-bezier(0.16,1,0.3,1), filter 0.4s ease;
+}
+
+.menu-category:hover .menu-card-photo {
+  transform: scale(1.05);
+  filter: saturate(1.04);
+}
+
+.menu-card-badge {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  z-index: 1;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(9, 22, 15, 0.78);
+  border: 1px solid rgba(245,208,96,0.25);
+  color: var(--gold-lt);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .menu-cat-title {
@@ -835,6 +922,13 @@ footer {
   margin-bottom: 1rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid rgba(200,151,10,0.2);
+}
+
+.menu-card-note {
+  color: rgba(253,246,227,0.62);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 0.95rem;
 }
 
 .menu-items {
@@ -945,6 +1039,73 @@ footer {
   font-family: 'Tiro Telugu', serif;
   font-size: 0.88rem;
   line-height: 1.5;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(6, 12, 9, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.lightbox.hidden {
+  display: none;
+}
+
+.lightbox-dialog {
+  width: min(100%, 1100px);
+  max-height: 90vh;
+  overflow: hidden;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.96);
+  box-shadow: 0 30px 90px rgba(0,0,0,0.35);
+}
+
+.lightbox-image {
+  display: block;
+  width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+.lightbox-caption {
+  padding: 1.3rem 1.4rem 1.5rem;
+}
+
+.lightbox-caption h3 {
+  color: var(--forest);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.45rem;
+}
+
+.lightbox-caption p {
+  color: #5e5349;
+  font-family: 'Tiro Telugu', serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  color: var(--forest);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
 }
 
 /* Responsive gallery */
@@ -1217,6 +1378,17 @@ select.form-input option {
   .contact-form-card { padding: 1.5rem 1.25rem; }
   .book-banner { padding: 1.75rem 1.25rem; }
   .section-subcopy { font-size: 0.95rem; }
+  .hero-content-shell {
+    padding: 2rem 1rem 2.5rem;
+    border-radius: 28px;
+  }
+  .hero-highlights {
+    gap: 0.55rem;
+  }
+  .hero-highlight-pill {
+    font-size: 0.72rem;
+    padding: 0.55rem 0.78rem;
+  }
   .hero-bowl {
     width: 92vw;
     right: -16%;
@@ -1228,6 +1400,12 @@ select.form-input option {
   }
   .hero-steam {
     height: 86px;
+  }
+  .lightbox {
+    padding: 1rem;
+  }
+  .lightbox-caption h3 {
+    font-size: 1.22rem;
   }
 }
 
