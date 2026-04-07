@@ -30,6 +30,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   position: relative;
+  line-height: 1.6;
 }
 
 body > * {
@@ -269,12 +270,29 @@ body > * {
   box-shadow: 0 12px 40px rgba(37,211,102,0.45);
 }
 
+.btn-hero-outline {
+  font-size: 1rem;
+  padding: 0.85rem 2rem;
+  border-width: 1.5px;
+  background: rgba(255,255,255,0.06);
+  color: var(--cream);
+  border-color: rgba(245,208,96,0.28);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.14);
+}
+
+.btn-hero-outline:hover {
+  background: rgba(255,255,255,0.12);
+  color: var(--gold-lt);
+  border-color: rgba(245,208,96,0.4);
+}
+
 /* =========================================================
    HERO SECTION
    ========================================================= */
 .hero-section {
   background: transparent;
   position: relative;
+  padding-top: 5.5rem;
 }
 
 .hero-content-shell {
@@ -287,6 +305,43 @@ body > * {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.26);
+}
+
+.trust-strip {
+  padding: 0 0 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.trust-item {
+  padding: 1.15rem 1.1rem;
+  border-radius: 22px;
+  background: rgba(11, 24, 17, 0.68);
+  border: 1px solid rgba(245, 208, 96, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.18);
+}
+
+.trust-item strong {
+  display: block;
+  color: var(--gold-lt);
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.trust-item span {
+  display: block;
+  color: rgba(253,246,227,0.72);
+  font-size: 0.88rem;
+  line-height: 1.6;
 }
 
 .hero-aura {
@@ -669,6 +724,13 @@ body > * {
   color: rgba(253,246,227,0.6);
 }
 
+.about-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 /* =========================================================
    SERVICES SECTION
    ========================================================= */
@@ -770,6 +832,7 @@ footer {
   border: 1px solid rgba(200,151,10,0.3);
   border-radius: 20px;
   padding: 2.5rem 2rem;
+  box-shadow: 0 20px 60px rgba(9, 20, 15, 0.24);
 }
 
 /* =========================================================
@@ -854,6 +917,10 @@ footer {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.menu-bottom-cta {
+  margin-top: 2.2rem;
 }
 
 .menu-grid {
@@ -1136,6 +1203,77 @@ footer {
   gap: 1.2rem;
 }
 
+.reviews-marquee {
+  --reviews-gap: 1.2rem;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1.2rem;
+}
+
+.reviews-marquee::before,
+.reviews-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.reviews-marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(253, 246, 227, 0.98), rgba(253, 246, 227, 0));
+}
+
+.reviews-marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(253, 246, 227, 0.98), rgba(253, 246, 227, 0));
+}
+
+.reviews-track {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: var(--reviews-gap);
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.reviews-marquee:hover .reviews-track,
+.reviews-marquee:focus-within .reviews-track {
+  cursor: grab;
+}
+
+.reviews-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.review-summary-card {
+  background: rgba(255,255,255,0.64);
+  border: 1px solid rgba(26,74,46,0.09);
+  border-radius: 22px;
+  padding: 1rem 1.1rem;
+}
+
+.review-summary-card strong {
+  display: block;
+  color: var(--forest);
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.review-summary-card span {
+  color: #69564a;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
 .review-pill {
   display: inline-flex;
   align-items: center;
@@ -1160,6 +1298,15 @@ footer {
   border-radius: 26px;
   padding: 1.8rem;
   box-shadow: 0 22px 60px rgba(26,74,46,0.08);
+  width: min(24rem, calc(100vw - 3rem));
+  min-width: min(24rem, calc(100vw - 3rem));
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  scroll-snap-align: start;
+}
+
+.review-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 26px 70px rgba(26,74,46,0.12);
 }
 
 .review-head {
@@ -1267,6 +1414,23 @@ footer {
   border: 1px solid rgba(200,151,10,0.2);
   border-radius: 20px;
   padding: 2.5rem 2rem;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.2);
+}
+
+.contact-form-topline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(245,208,96,0.16);
+  color: rgba(253,246,227,0.78);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -1297,11 +1461,24 @@ footer {
 .form-input:focus {
   border-color: var(--gold);
   background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 0 4px rgba(200,151,10,0.12);
 }
 
 select.form-input option {
   background: var(--forest);
   color: var(--cream);
+}
+
+.contact-form-note {
+  color: rgba(253,246,227,0.58);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.contact-form-note a {
+  color: var(--gold-lt);
+  text-decoration: none;
 }
 
 /* =========================================================
@@ -1389,6 +1566,17 @@ select.form-input option {
     font-size: 0.72rem;
     padding: 0.55rem 0.78rem;
   }
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-cta-row {
+    flex-direction: column;
+  }
+  .about-cta-row .btn-gold,
+  .about-cta-row .btn-outline {
+    justify-content: center;
+    width: 100%;
+  }
   .hero-bowl {
     width: 92vw;
     right: -16%;
@@ -1413,8 +1601,33 @@ select.form-input option {
   .menu-package-grid {
     grid-template-columns: 1fr;
   }
+  .trust-grid,
+  .reviews-summary,
   .reviews-grid {
     grid-template-columns: 1fr;
+  }
+
+  .reviews-marquee {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .reviews-marquee::before,
+  .reviews-marquee::after {
+    display: none;
+  }
+
+  .reviews-track {
+    animation: none;
+    width: max-content;
+    padding-right: 1rem;
+  }
+
+  .review-card {
+    width: min(21rem, calc(100vw - 3rem));
+    min-width: min(21rem, calc(100vw - 3rem));
   }
 }
 

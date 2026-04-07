@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initHeroParallax();
   initGalleryLightbox();
+  initTestimonialsMarquee();
 });
 
 
@@ -137,7 +138,7 @@ window.showMenu = showMenu;
    ========================================================= */
 function initScrollReveal() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll('.service-card, .menu-category, .gallery-item, .stat-card, .contact-info-card, .contact-form-card, section[id]').forEach((el) => {
+    document.querySelectorAll('.service-card, .menu-category, .gallery-item, .stat-card, .contact-info-card, .contact-form-card, .trust-item, .review-summary-card, section[id]').forEach((el) => {
       el.classList.add('visible');
     });
     return;
@@ -151,6 +152,8 @@ function initScrollReveal() {
     ...document.querySelectorAll('.stat-card'),
     ...document.querySelectorAll('.contact-info-card'),
     ...document.querySelectorAll('.contact-form-card'),
+    ...document.querySelectorAll('.trust-item'),
+    ...document.querySelectorAll('.review-summary-card'),
     document.getElementById('about'),
     document.getElementById('services'),
     document.getElementById('menu'),
@@ -230,51 +233,36 @@ function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
+  const phoneInput = document.getElementById('f-phone');
+  const successEl = document.getElementById('form-success');
+
+  phoneInput?.addEventListener('input', () => {
+    const phone = phoneInput.value.trim();
+    if (!phone || /^[6-9]\d{9}$/.test(phone)) {
+      phoneInput.setCustomValidity('');
+    } else {
+      phoneInput.setCustomValidity('Please enter a valid 10-digit Indian mobile number.');
+    }
+  });
+
   form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Gather values
-    const name   = document.getElementById('f-name')?.value.trim()  || '';
-    const phone  = document.getElementById('f-phone')?.value.trim() || '';
-    const event  = document.getElementById('f-event')?.value        || '';
-    const guests = document.getElementById('f-guests')?.value       || '';
-    const msg    = document.getElementById('f-msg')?.value.trim()   || '';
-
-    // Basic validation
-    if (!name || !phone) {
-      alert('Please fill in your name and phone number.');
+    if (!form.checkValidity()) {
+      e.preventDefault();
+      form.reportValidity();
       return;
     }
 
-    if (!/^[6-9]\d{9}$/.test(phone)) {
-      alert('Please enter a valid 10-digit Indian mobile number.');
+    if (phoneInput && !/^[6-9]\d{9}$/.test(phoneInput.value.trim())) {
+      e.preventDefault();
+      phoneInput.setCustomValidity('Please enter a valid 10-digit Indian mobile number.');
+      form.reportValidity();
       return;
     }
 
-    // Build a WhatsApp pre-filled message and redirect
-    const waText =
-      `Hello Sri Tulasi Caterers!%0A%0A` +
-      `*Name:* ${encodeURIComponent(name)}%0A` +
-      `*Phone:* ${encodeURIComponent(phone)}%0A` +
-      (event  ? `*Event:* ${encodeURIComponent(event)}%0A`            : '') +
-      (guests ? `*Guests (approx):* ${encodeURIComponent(guests)}%0A` : '') +
-      (msg    ? `*Message:* ${encodeURIComponent(msg)}%0A`            : '') +
-      `%0APlease let me know the details for catering. Thank you!`;
-
-    // Show success message
-    const successEl = document.getElementById('form-success');
     if (successEl) {
-      successEl.textContent = "Thanks! ధన్యవాదాలు. We'll contact you soon on WhatsApp.";
+      successEl.textContent = 'Thank you. Sending your request now.';
       successEl.classList.remove('hidden');
     }
-
-    // Reset form
-    form.reset();
-
-    // Open WhatsApp after a short delay
-    setTimeout(() => {
-      window.open(`https://wa.me/919392923516?text=${waText}`, '_blank');
-    }, 800);
   });
 }
 
@@ -344,9 +332,119 @@ function initGalleryLightbox() {
   });
 }
 
+/* =========================================================
+   9. TESTIMONIALS MARQUEE
+   ========================================================= */
+function initTestimonialsMarquee() {
+  const marquee = document.querySelector('[data-marquee]');
+  const track = marquee?.querySelector('[data-marquee-track]');
+
+  if (!marquee || !track) return;
+
+  const desktopQuery = window.matchMedia('(min-width: 901px)');
+  const baseCards = Array.from(track.children);
+  let animationFrameId = null;
+  let currentX = 0;
+  let singleSetWidth = 0;
+  let paused = false;
+
+  const buildMarquee = () => {
+    track.querySelectorAll('[data-duplicate="true"]').forEach((node) => node.remove());
+    track.style.transform = 'translate3d(0, 0, 0)';
+    currentX = 0;
+
+    if (!desktopQuery.matches) {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+      }
+      return;
+    }
+
+    if (!baseCards.length) return;
+
+    const containerWidth = marquee.getBoundingClientRect().width;
+    let originalWidth = baseCards.reduce((total, card) => total + card.getBoundingClientRect().width, 0);
+    const cardGap = parseFloat(getComputedStyle(track).gap || '0');
+    originalWidth += cardGap * Math.max(baseCards.length - 1, 0);
+    singleSetWidth = originalWidth;
+
+    let workingWidth = originalWidth;
+    let safety = 0;
+    while (workingWidth < containerWidth * 2.2 && safety < 8) {
+      baseCards.forEach((card) => {
+        const clone = card.cloneNode(true);
+        clone.dataset.duplicate = 'true';
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+      });
+      workingWidth += originalWidth + cardGap;
+      safety += 1;
+    }
+
+    if (track.querySelectorAll('[data-duplicate="true"]').length === 0) {
+      baseCards.forEach((card) => {
+        const clone = card.cloneNode(true);
+        clone.dataset.duplicate = 'true';
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+      });
+    }
+  };
+
+  const animate = () => {
+    if (!desktopQuery.matches) return;
+
+    if (!paused && singleSetWidth > 0) {
+      currentX -= 0.45;
+      if (Math.abs(currentX) >= singleSetWidth) {
+        currentX = 0;
+      }
+      track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+    }
+
+    animationFrameId = requestAnimationFrame(animate);
+  };
+
+  const startAfterLayout = () => {
+    buildMarquee();
+    if (animationFrameId) {
+      cancelAnimationFrame(animationFrameId);
+    }
+    animationFrameId = requestAnimationFrame(animate);
+  };
+
+  marquee.addEventListener('mouseenter', () => {
+    paused = true;
+  });
+
+  marquee.addEventListener('mouseleave', () => {
+    paused = false;
+  });
+
+  buildMarquee();
+  if (document.readyState === 'complete') {
+    startAfterLayout();
+  } else {
+    window.addEventListener('load', startAfterLayout, { once: true });
+  }
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(buildMarquee, 150);
+  });
+
+  if (typeof desktopQuery.addEventListener === 'function') {
+    desktopQuery.addEventListener('change', startAfterLayout);
+  } else if (typeof desktopQuery.addListener === 'function') {
+    desktopQuery.addListener(startAfterLayout);
+  }
+}
+
 
 /* =========================================================
-   9. SMOOTH SCROLL for anchor links
+   10. SMOOTH SCROLL for anchor links
    (Handles the offset created by the sticky navbar)
    ========================================================= */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
