@@ -1378,6 +1378,35 @@ footer {
   margin-top: 2px;
 }
 
+.contact-icon-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-top: 0;
+  border-radius: 999px;
+  background: rgba(37, 211, 102, 0.16);
+  color: #25d366;
+}
+
+.contact-icon-phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-top: 0;
+  border-radius: 999px;
+  background: rgba(245, 208, 96, 0.16);
+  color: var(--gold-lt);
+}
+
+.contact-icon-svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
 .contact-label {
   font-size: 0.7rem;
   font-weight: 700;
@@ -1401,6 +1430,34 @@ footer {
   margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(200,151,10,0.16);
+}
+
+.footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.footer-contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.footer-contact-icon-whatsapp {
+  color: #25d366;
+}
+
+.footer-contact-icon-phone {
+  color: var(--gold-lt);
+}
+
+.footer-contact-icon-svg {
+  width: 1rem;
+  height: 1rem;
 }
 
 .footer-areas-list {

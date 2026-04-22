@@ -234,7 +234,38 @@ function initContactForm() {
   if (!form) return;
 
   const phoneInput = document.getElementById('f-phone');
+  const nameInput = document.getElementById('f-name');
+  const eventInput = document.getElementById('f-event');
+  const guestsInput = document.getElementById('f-guests');
+  const messageInput = document.getElementById('f-msg');
+  const whatsappNumber = document.getElementById('whatsapp-number')?.value.trim() || '919392923516';
   const successEl = document.getElementById('form-success');
+  const submitButton = form.querySelector('button[type="submit"]');
+  const defaultButtonLabel = submitButton ? submitButton.textContent.trim() : '';
+
+  const setFormMessage = (message, type) => {
+    if (!successEl) return;
+
+    successEl.textContent = message;
+    successEl.classList.remove('hidden', 'text-green-400', 'text-red-400');
+    successEl.classList.add(type === 'error' ? 'text-red-400' : 'text-green-400');
+  };
+
+  const encodeFormData = (data) => new URLSearchParams(data).toString();
+
+  const buildWhatsAppMessage = () => {
+    const lines = [
+      'Hello Sri Tulasi Caterers, I want to enquire about catering.',
+      '',
+      `Name: ${nameInput?.value.trim() || '-'}`,
+      `Phone: ${phoneInput?.value.trim() || '-'}`,
+      `Event Type: ${eventInput?.value || '-'}`,
+      `Guests: ${guestsInput?.value.trim() || '-'}`,
+      `Message: ${messageInput?.value.trim() || '-'}`,
+    ];
+
+    return lines.join('\n');
+  };
 
   phoneInput?.addEventListener('input', () => {
     const phone = phoneInput.value.trim();
@@ -245,23 +276,52 @@ function initContactForm() {
     }
   });
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
     if (!form.checkValidity()) {
-      e.preventDefault();
       form.reportValidity();
       return;
     }
 
     if (phoneInput && !/^[6-9]\d{9}$/.test(phoneInput.value.trim())) {
-      e.preventDefault();
       phoneInput.setCustomValidity('Please enter a valid 10-digit Indian mobile number.');
       form.reportValidity();
       return;
     }
 
-    if (successEl) {
-      successEl.textContent = 'Thank you. Sending your request now.';
-      successEl.classList.remove('hidden');
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+    }
+
+    setFormMessage('Sending your request now.', 'success');
+
+    try {
+      const formData = new FormData(form);
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(buildWhatsAppMessage())}`;
+
+      fetch(form.getAttribute('action') || '/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: encodeFormData(formData),
+      }).catch(() => {
+        // WhatsApp is the primary enquiry path, so a backup form-post failure should not block the customer.
+      });
+
+      setFormMessage('Your enquiry is ready. Opening WhatsApp now.', 'success');
+      window.location.href = whatsappUrl;
+      form.reset();
+      phoneInput?.setCustomValidity('');
+    } catch (error) {
+      setFormMessage('Sorry, something went wrong. Please use the WhatsApp button or call us directly.', 'error');
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = defaultButtonLabel || 'Get My Quote';
+      }
     }
   });
 }
